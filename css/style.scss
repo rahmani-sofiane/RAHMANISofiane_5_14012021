@@ -1,0 +1,41 @@
+// Variables
+
+/* color */
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: white;
+
+/* font */
+$font-title: 'Shrikhand', sans-serif;
+$font-text: 'Roboto', sans-serif;
+
+//Mixins 
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+figcaption{
+    width: 100%;
+}
+.img-wrapper{
+    @include flex-center();
+
+    padding-bottom: 100px;
+    
+    .bloc-picture img {
+        width: 100%;
+    }
+    .rating{
+        @include flex-center();
+    }
+    .choice-list{
+        @include flex-center();
+        justify-content: space-between;
+        width: 150px;
+    }
+
+}
