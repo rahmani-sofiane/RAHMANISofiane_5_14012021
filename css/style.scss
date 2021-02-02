@@ -1,12 +1,12 @@
 // Variables
 
 /* color */
-$color-primary: red;
+$color-primary: black;
 $color-secondary: #ff2f5c;
 
 /* font */
 $font-title: 'Shrikhand', sans-serif;
-$font-text: 'Roboto', sans-serif;
+$font-text: 'Raleway', sans-serif;
 
 //Mixins 
 
@@ -22,10 +22,15 @@ a {
 figcaption{
     width: 100%;
 }
-.img-wrapper{
+.title{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.product-wrapper{
     @include flex-center();
 
-    font-family:Raleway,sans-serif;
+    font-family:$font-text,sans-serif;
     text-align:center;
     border:1px solid rgba(0,0,0,.1);
     overflow:hidden;
@@ -65,15 +70,16 @@ figcaption{
         color:black; 
     }
     .choice-list{
-        @include flex-center();
         width: 150px;
         padding:0;
         margin:0;
-        opacity:0;
+        opacity:1;
         position:absolute;
         top:60%;
         left:50%;
         z-index:1;
+        transform:translateY(-50%) translateX(-50%);
+
         li {
             display:inline-block
         }
@@ -89,16 +95,8 @@ figcaption{
             display:block;
             position:relative;
         }
-
     }
 
 }
 
-
-
-.product-grid .social li a{color:#fff;background-color:#333;font-size:16px;line-height:40px;text-align:center;height:40px;width:40px;margin:0 2px;display:block;position:relative;transition:all .3s ease-in-out}
-.product-grid .social li a:hover{color:#fff;background-color:#ef5777}
-.product-grid .social li a:after,.product-grid .social li a:before{content:attr(data-tip);color:#fff;background-color:#000;font-size:12px;letter-spacing:1px;line-height:20px;padding:1px 5px;white-space:nowrap;opacity:0;transform:translateX(-50%);position:absolute;left:50%;top:-30px}
-.product-grid .social li a:after{content:'';height:15px;width:15px;border-radius:0;transform:translateX(-50%) rotate(45deg);top:-20px;z-index:-1}
-.product-grid .social li a:hover:after,.product-grid .social li a:hover:before{opacity:1}
 
