@@ -5,98 +5,99 @@ $color-primary: black;
 $color-secondary: #ff2f5c;
 
 /* font */
-$font-title: 'Shrikhand', sans-serif;
-$font-text: 'Raleway', sans-serif;
+$font-title: "Shrikhand", sans-serif;
+$font-text: "Raleway", sans-serif;
 
-//Mixins 
+//Mixins
 
 @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 a {
-    color: black;
+  color: black;
 }
-figcaption{
+figcaption {
+  width: 100%;
+}
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.product-wrapper {
+  @include flex-center();
+
+  font-family: $font-text, sans-serif;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .bloc-picture img {
     width: 100%;
-}
-.title{
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-.product-wrapper{
+  }
+  .sale-label {
+    color: #fff;
+    background-color: $color-secondary;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+  .discount-label {
+    background-color: $color-secondary;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 10px;
+    color: white;
+    padding: 2px 7px;
+  }
+  .rating {
     @include flex-center();
+    padding-left: 0px;
+  }
+  .fa-star {
+    color: #ffe600;
+    padding: 10px;
+  }
+  .disable {
+    color: black;
+  }
+  .choice-list {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 1;
+    transform: translateY(-50%) translateX(-50%);
 
-    font-family:$font-text,sans-serif;
-    text-align:center;
-    border:1px solid rgba(0,0,0,.1);
-    overflow:hidden;
-    position:relative;
-    z-index:1;
-    
-    .bloc-picture img {
-        width: 100%;
+    li {
+      display: inline-block;
     }
-    .sale-label{
-        color:#fff;
-        background-color:$color-secondary;
-        text-transform:uppercase;
-        padding:2px 7px;
-        position:absolute;
-        top:10px;
-        left:0
+    li a {
+      color: #fff;
+      background-color: #333;
+      font-size: 16px;
+      line-height: 40px;
+      text-align: center;
+      height: 40px;
+      width: 40px;
+      margin: 0 2px;
+      display: block;
+      position: relative;
+      top: 50%;
     }
-    .discount-label{
-        background-color:$color-secondary;
-        position: absolute;
-        left:auto;
-        right:0;
-        top: 10px;
-        color: white;
-        padding:2px 7px;
-    }
-    .rating{
-        @include flex-center();
-        padding-left:0px;
-    }
-    .fa-star{
-        color:#ffe600;
-        padding:10px;
-    }
-    .disable{
-        color:black; 
-    }
-    .choice-list{
-        width: 150px;
-        padding:0;
-        margin:0;
-        opacity:1;
-        position:absolute;
-        top:60%;
-        left:50%;
-        z-index:1;
-        transform:translateY(-50%) translateX(-50%);
-
-        li {
-            display:inline-block
-        }
-        li a {
-            color:#fff;
-            background-color:#333;
-            font-size:16px;
-            line-height:40px;
-            text-align:center;
-            height:40px;
-            width:40px;
-            margin:0 2px;
-            display:block;
-            position:relative;
-        }
-    }
-
+  }
 }
-
-
+.product-wrapper:hover .choice-list {
+  opacity: 1;
+}
