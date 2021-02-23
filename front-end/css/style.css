@@ -1,5 +1,25 @@
 /* color */
 /* font */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #f3e9f1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+}
+footer {
+  background: #f3e9f1;
+}
+
 a {
   color: black;
 }
@@ -8,10 +28,25 @@ figcaption {
   width: 100%;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 100%;
+  }
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  width: 150px;
+  margin-right: 25px;
 }
 
 .product-wrapper {
@@ -25,9 +60,14 @@ figcaption {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  margin-bottom: 20px;
+}
+.product-wrapper .bloc-picture {
+  height: 300px;
 }
 .product-wrapper .bloc-picture img {
   width: 100%;
+  height: 100%;
 }
 .product-wrapper .sale-label {
   color: #fff;
@@ -91,6 +131,19 @@ figcaption {
 
 .product-wrapper:hover .choice-list {
   opacity: 1;
+}
+
+.container-footer {
+  margin-bottom: 0px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

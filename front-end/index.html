@@ -16,8 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-
-    <script src="js/index.js"></script>
     <script
       src="https://kit.fontawesome.com/604b43d3d1.js"
       crossorigin="anonymous"
@@ -25,26 +23,118 @@
 
     <title>Orinoco</title>
   </head>
-
   <body>
-    <div class="container">
-      <h1 class="title">Orinoco</h1>
-      <div class="row">
+    <header id="header">
+      <div class="logo">
+        <a href="index.html">
+          <figure class="bloc-picture">
+              <img src="../back-end/images/logo_orinoco.png" />
+          </figure>
+        </a>
+      </div>
+      <navbar class="navbar">
+        <p>Accueil</p>
+        <p>Panier</p>
+      </navbar>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+              <div class="product-wrapper">
+                  <div class="img-wrapper">
+                      <a href="product_page.html">
+                          <figure class="bloc-picture">
+                              <img src="../back-end/images/teddy_1.jpg" />
+                      </a>
+                          </figure>
+                      <figcaption>
+                          <p class="name-product">Norbert</p>
+                          <ul class="rating">
+                              <li class="fas fa-star"></li>
+                              <li class="fas fa-star"></li>
+                              <li class="fas fa-star"></li>
+                              <li class="fas fa-star"></li>
+                              <li class="far fa-star disable"></li>
+                          </ul>
+                      </figcaption>
+                  </div>
+                  <ul class="choice-list">
+                      <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
+                      <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
+                      <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
+                  </ul>
+                  <span class="sale-label">Sale</span>
+                  <span class="discount-label">20%</span>
+              </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-wrapper">
+              <div class="img-wrapper">
+                  <a href="product_page.html">
+                      <figure class="bloc-picture">
+                          <img src="../back-end/images/teddy_2.jpg" />
+                  </a>
+                      </figure>
+                  <figcaption>
+                      <p>Arnold</p>
+                      <ul class="rating">
+                          <li class="fas fa-star"></li>
+                          <li class="fas fa-star"></li>
+                          <li class="fas fa-star"></li>
+                          <li class="fas fa-star"></li>
+                          <li class="far fa-star disable"></li>
+                      </ul>
+                  </figcaption>
+              </div>
+              <ul class="choice-list">
+                  <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
+                  <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
+                  <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-wrapper">
+              <div class="img-wrapper">
+                  <a href="product_page.html">
+                      <figure class="bloc-picture">
+                          <img src="../back-end/images/teddy_3.jpg" />
+                  </a>
+                      </figure>
+                  <figcaption>
+                      <p>Lenny and Carl</p>
+                      <ul class="rating">
+                          <li class="fas fa-star"></li>
+                          <li class="fas fa-star"></li>
+                          <li class="fas fa-star"></li>
+                          <li class="far fas-star disable"></li>
+                          <li class="far fa-star disable"></li>
+                      </ul>
+                  </figcaption>
+              </div>
+              <ul class="choice-list">
+                  <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
+                  <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
+                  <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
+              </ul>
+            </div>
+          </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-wrapper">
                 <div class="img-wrapper">
                     <a href="product_page.html">
                         <figure class="bloc-picture">
-                            <img src="../back-end/images/teddy_2.jpg" />
+                            <img src="../back-end/images/teddy_4.jpg" />
                     </a>
                         </figure>
                     <figcaption>
-                        <p>Teddy bear</p>
+                        <p>Gustav</p>
                         <ul class="rating">
                             <li class="fas fa-star"></li>
                             <li class="fas fa-star"></li>
                             <li class="fas fa-star"></li>
-                            <li class="fas fa-star"></li>
+                            <li class="far fas-star disable"></li>
                             <li class="far fa-star disable"></li>
                         </ul>
                     </figcaption>
@@ -54,18 +144,43 @@
                     <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
                     <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
-                <span class="sale-label">Sale</span>
-                <span class="discount-label">20%</span>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-          <p>Produit 2</p>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <p>Produit 3</p>
+          <div class="product-wrapper">
+            <div class="img-wrapper">
+                <a href="product_page.html">
+                    <figure class="bloc-picture">
+                        <img src="../back-end/images/teddy_5.jpg" />
+                </a>
+                    </figure>
+                <figcaption>
+                    <p>Garfunkel</p>
+                    <ul class="rating">
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                    </ul>
+                </figcaption>
+            </div>
+            <ul class="choice-list">
+                <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
+                <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <footer></footer>
+    </main>
+    <footer id="footer">
+      <ul class="container footer">
+        <p>A propos</p>
+        <p>Contact</p>
+      </ul>
+    </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>

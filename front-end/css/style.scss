@@ -1,7 +1,7 @@
 // Variables
 
 /* color */
-$color-primary: black;
+$color-primary: #f3e9f1;
 $color-secondary: #ff2f5c;
 
 /* font */
@@ -16,16 +16,45 @@ $font-text: "Raleway", sans-serif;
   justify-content: center;
   flex-wrap: wrap;
 }
+header {
+  @include flex-center();
+  background-color: $color-primary;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+}
+footer {
+  background: $color-primary;
+}
 a {
   color: black;
 }
+
 figcaption {
   width: 100%;
 }
-.title {
-  text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+
+// img {
+//   object-fit: cover;
+// }
+.logo {
+  @include flex-center();
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+.row {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  width: 150px;
+  margin-right: 25px;
 }
 .product-wrapper {
   @include flex-center();
@@ -36,9 +65,14 @@ figcaption {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  margin-bottom: 20px;
 
-  .bloc-picture img {
-    width: 100%;
+  .bloc-picture {
+    height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .sale-label {
     color: #fff;
@@ -100,4 +134,12 @@ figcaption {
 }
 .product-wrapper:hover .choice-list {
   opacity: 1;
+}
+.container-footer {
+  margin-bottom: 0px;
+}
+.footer {
+  @include flex-center();
+  justify-content: space-between;
+  padding-top: 10px;
 }
