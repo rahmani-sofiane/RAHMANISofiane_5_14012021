@@ -24,11 +24,11 @@
     <title>Orinoco</title>
   </head>
   <body>
-    <header id="header">
+    <header>
       <div class="logo">
         <a href="index.html">
           <figure class="bloc-picture">
-              <img src="../back-end/images/logo_orinoco.png" />
+            <img src="../back-end/images/logo_orinoco.png" />
           </figure>
         </a>
       </div>
@@ -36,156 +36,180 @@
         <a href="index.html">
           <p>Accueil</p>
         </a>
-        <a>
-          <a href="pages/panier_page.html"></a>
-            <p>Panier</p>
+        <a href="pages/panier_page.html">
+          <p>Panier</p>
         </a>
       </navbar>
     </header>
-    <main class="main" id="main">
+    <main>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4">
-              <div class="product-wrapper">
-                  <div class="img-wrapper">
-                      <a href="pages/product_page.html">
-                          <figure class="bloc-picture">
-                              <img class="Image" src="http://localhost:3000/images/teddy_1.jpg" />
-                      </a>
-                          </figure>
-                      <figcaption>
-                          <p class="productsName"></p>
-                          <p class= "productsPrice"></p>
-                          <ul class="rating">
-                              <li class="fas fa-star"></li>
-                              <li class="fas fa-star"></li>
-                              <li class="fas fa-star"></li>
-                              <li class="fas fa-star"></li>
-                              <li class="far fa-star disable"></li>
-                          </ul>
-                      </figcaption>
-                  </div>
-                  <ul class="choice-list">
-                      <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
-                      <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
-                      <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
-                  </ul>
-                  <span class="sale-label">Sale</span>
-                  <span class="discount-label">20%</span>
-              </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
             <div class="product-wrapper">
               <div class="img-wrapper">
-                  <a href="product_page.html">
-                      <figure class="bloc-picture">
-                          <img class="productsImage" src="http://localhost:3000/images/teddy_2.jpg" />
-                  </a>
-                      </figure>
-                  <figcaption>
-                      <p class="productsName"></p>
-                      <p class= "productsPrice"></p>
-                      <ul class="rating">
-                          <li class="fas fa-star"></li>
-                          <li class="fas fa-star"></li>
-                          <li class="fas fa-star"></li>
-                          <li class="fas fa-star"></li>
-                          <li class="far fa-star disable"></li>
-                      </ul>
-                  </figcaption>
-              </div>
-              <ul class="choice-list">
-                  <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
-                  <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
-                  <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-wrapper">
-              <div class="img-wrapper">
-                  <a href="product_page.html">
-                      <figure class="bloc-picture">
-                          <img class="productsImage" src="http://localhost:3000/images/teddy_3.jpg" />
-                  </a>
-                      </figure>
-                  <figcaption>
-                      <p class="productsName"></p>
-                      <p class= "productsPrice"></p>
-                      <ul class="rating">
-                          <li class="fas fa-star"></li>
-                          <li class="fas fa-star"></li>
-                          <li class="fas fa-star"></li>
-                          <li class="far fas-star disable"></li>
-                          <li class="far fa-star disable"></li>
-                      </ul>
-                  </figcaption>
-              </div>
-              <ul class="choice-list">
-                  <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
-                  <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
-                  <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-wrapper">
-                <div class="img-wrapper">
-                    <a href="product_page.html">
-                        <figure class="bloc-picture">
-                            <img class="productsImage" src="http://localhost:3000/images/teddy_4.jpg" />
-                    </a>
-                        </figure>
-                    <figcaption>
-                        <p class="productsName"></p>
-                        <p class= "productsPrice"></p>
-                        <ul class="rating">
-                            <li class="fas fa-star"></li>
-                            <li class="fas fa-star"></li>
-                            <li class="fas fa-star"></li>
-                            <li class="far fas-star disable"></li>
-                            <li class="far fa-star disable"></li>
-                        </ul>
-                    </figcaption>
-                </div>
-                <ul class="choice-list">
-                    <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
-                    <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
-                    <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="product-wrapper">
-            <div class="img-wrapper">
-                <a href="product_page.html">
-                    <figure class="bloc-picture">
-                        <img class="productsImage" src="http://localhost:3000/images/teddy_5.jpg" />
-                </a>
-                    </figure>
+                <figure class="bloc-picture">
+                  <img class="productImage" />
+                </figure>
                 <figcaption>
-                    <p class="productsName"></p>
-                    <p class= "productsPrice"></p>
-                    <ul class="rating">
-                        <li class="fas fa-star"></li>
-                        <li class="fas fa-star"></li>
-                        <li class="fas fa-star"></li>
-                        <li class="fas fa-star"></li>
-                        <li class="fas fa-star"></li>
-                    </ul>
+                  <p class="productName"></p>
+                  <p class="productPrice"></p>
+                  <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star disable"></li>
+                  </ul>
                 </figcaption>
+              </div>
+              <ul class="choice-list">
+                <li>
+                  <a class="productLink" href=""
+                    ><i class="fas fa-search"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="panier_page.html"
+                    ><i class="fas fa-shopping-cart"></i
+                  ></a>
+                </li>
+              </ul>
+              <span class="sale-label">Sale</span>
+              <span class="discount-label">20%</span>
             </div>
-            <ul class="choice-list">
-                <li><a href="product_page.html"><i class="fas fa-search"></i></a></li>
-                <li><a href="panier_page.html"><i class="fas fa-shopping-bag"></i></a></li>
-                <li><a href="panier_page.html"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-wrapper">
+              <div class="img-wrapper">
+                <figure class="bloc-picture">
+                  <img class="productImage" />
+                </figure>
+                <figcaption>
+                  <p class="productName"></p>
+                  <p class="productPrice"></p>
+                  <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star disable"></li>
+                  </ul>
+                </figcaption>
+              </div>
+              <ul class="choice-list">
+                <li>
+                  <a class="productLink" href=""
+                    ><i class="fas fa-search"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="panier_page.html"
+                    ><i class="fas fa-shopping-cart"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-wrapper">
+              <div class="img-wrapper">
+                <figure class="bloc-picture">
+                  <img class="productImage" />
+                </figure>
+                <figcaption>
+                  <p class="productName"></p>
+                  <p class="productPrice"></p>
+                  <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star disable"></li>
+                  </ul>
+                </figcaption>
+              </div>
+              <ul class="choice-list">
+                <li>
+                  <a class="productLink" href=""
+                    ><i class="fas fa-search"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="panier_page.html"
+                    ><i class="fas fa-shopping-cart"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-wrapper">
+              <div class="img-wrapper">
+                <figure class="bloc-picture">
+                  <img class="productImage" />
+                </figure>
+                <figcaption>
+                  <p class="productName"></p>
+                  <p class="productPrice"></p>
+                  <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star disable"></li>
+                  </ul>
+                </figcaption>
+              </div>
+              <ul class="choice-list">
+                <li>
+                  <a class="productLink" href=""
+                    ><i class="fas fa-search"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="panier_page.html"
+                    ><i class="fas fa-shopping-cart"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-wrapper">
+              <div class="img-wrapper">
+                <figure class="bloc-picture">
+                  <img class="productImage" />
+                </figure>
+                <figcaption>
+                  <p class="productName"></p>
+                  <p class="productPrice"></p>
+                  <ul class="rating">
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="fas fa-star"></li>
+                    <li class="far fa-star disable"></li>
+                  </ul>
+                </figcaption>
+              </div>
+              <ul class="choice-list">
+                <li>
+                  <a class="productLink" href=""
+                    ><i class="fas fa-search"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="panier_page.html"
+                    ><i class="fas fa-shopping-cart"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </main>
-    <footer id="footer">
+    <footer>
       <ul class="container footer">
         <p>A propos</p>
         <p>Contact</p>

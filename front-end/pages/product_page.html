@@ -10,8 +10,8 @@
     <meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="/Users/sofiane/GoogleDrive/Projets_Openclassrooms/RAHMANISofiane_5_14012021/front-end/css/style.css" />
-    <link rel="stylesheet" href="/Users/sofiane/GoogleDrive/Projets_Openclassrooms/RAHMANISofiane_5_14012021/front-end/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&family=Shrikhand&display=swap"
       rel="stylesheet"
@@ -24,59 +24,71 @@
     <title>Orinoco</title>
   </head>
   <body>
-    <header id="header">
+    <header>
       <div class="logo">
-        <a href="index.html">
+        <a href="../index.html">
           <figure class="bloc-picture">
-              <img src="/Users/sofiane/GoogleDrive/Projets_Openclassrooms/RAHMANISofiane_5_14012021/back-end/images/logo_orinoco.png" />
+            <img
+              src="/Users/sofiane/GoogleDrive/Projets_Openclassrooms/RAHMANISofiane_5_14012021/back-end/images/logo_orinoco.png"
+            />
           </figure>
         </a>
       </div>
       <navbar class="navbar">
-        <p>Accueil</p>
-        <p>Panier</p>
+        <a href="../index.html">
+          <p>Accueil</p>
+        </a>
+        <a href="pages/panier_page.html">
+          <p>Panier</p>
+        </a>
       </navbar>
     </header>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="product-wrapper">
-                        <div class="img-wrapper">
-                            <a href="product_page.html">
-                                <figure class="bloc-picture">
-                                    <img src="http://localhost:3000/images/teddy_1.jpg" />
-                            </a>
-                                </figure>
-                            <figcaption>
-                                <p>Gustav</p>
-                                <ul class="rating">
-                                    <li class="fas fa-star"></li>
-                                    <li class="fas fa-star"></li>
-                                    <li class="fas fa-star"></li>
-                                    <li class="far fas-star disable"></li>
-                                    <li class="far fa-star disable"></li>
-                                </ul>
-                            </figcaption>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="description-wrapper">
-                        <p>Nom de produit</p>
-                        <p>Description</p>
-                        <p>Menu déroulant quantité</p>
-                        <p>colors</p>
-                        <p>Ajouter au panier</p>
-                    </div>
-                </div>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="product-wrapper">
+              <div class="img-wrapper">
+                <figure class="bloc-picture">
+                  <img class="productImage" />
+                </figure>
+              </div>
             </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="description-wrapper">
+              <p class="productName"></p>
+              <p class="productDescription"></p>
+              <label for="sectionSelectColor">Colors</label>
+              <select
+                class="selectColor"
+                id="sectionSelectColor"
+                name="colors"
+              ></select>
+              <label for="sectionSelectQty">Quantité</label>
+              <input
+                type="number"
+                value="1"
+                min = "1"
+                required = "number"
+                class="selectQty"
+                id="sectionSelectQty"
+              ></input>
+              <p class="productPrice"></p>
+              <button id="btnAddToCart" class="btn btn-outline-primary">
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </main>
     <footer>
-        <ul class="container footer">
-            <p>A propos</p>
-            <p>Contact</p>
-        </ul>
+      <ul class="container footer">
+        <p>A propos</p>
+        <p>Contact</p>
+      </ul>
     </footer>
+    <script src="../js/product_page.js"></script>
+  </body>
 </html>

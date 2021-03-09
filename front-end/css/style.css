@@ -16,12 +16,18 @@ header {
     justify-content: space-between;
   }
 }
+body {
+  height: 100%;
+  width: 100%;
+}
+
 footer {
   background: #f3e9f1;
 }
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 figcaption {
@@ -131,6 +137,12 @@ figcaption {
 
 .product-wrapper:hover .choice-list {
   opacity: 1;
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
 
 .container-footer {

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Orinoco, Le site e-commerce thématique" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/604b43d3d1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Orinoco</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html">
+          <figure class="bloc-picture">
+            <img
+              src="/Users/sofiane/GoogleDrive/Projets_Openclassrooms/RAHMANISofiane_5_14012021/back-end/images/logo_orinoco.png"
+            />
+          </figure>
+        </a>
+      </div>
+      <navbar class="navbar">
+        <a href="../index.html">
+          <p>Accueil</p>
+        </a>
+        <a href="pages/panier_page.html">
+          <p>Panier</p>
+        </a>
+      </navbar>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-sm12">
+                <p class="recapitulatifCommande">Récapitulatif de votre commande</p>
+                <p>bloc récap du panier</p>
+                <p class="total">Total du panier</p>
+                <button class="btn btn-outline-primary">Continuer mes achats</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>"Champs obligatoire"</p>
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input id="firstName" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label>Prénom</label>
+                    <input id="lastName" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label>Adresse</label>
+                    <input id="adresse" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label>Ville</label>
+                    <input id="ville" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label>Adresse email</label>
+                    <input id="email" class="form-control" type="email" required />
+                </div>
+                <button class="btn btn-outline-primary">Commander</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul class="container footer">
+          <p>A propos</p>
+          <p>Contact</p>
+        </ul>
+      </footer>
+      <script src="../js/panier_page.js"></script>
+    </body>
+  </html>
+  </body>
+</html>
