@@ -49,6 +49,13 @@ async function getMain() {
 
 // Fonction permettant de mettre à jour le prix en fonction de la quantité
 
+function updatePrice() {
+  let price = document.getElementsByClassName("productPrice");
+  console.log(price);
+  let quantity = document.getElementById("sectionSelectQty");
+  console.log(quantity);
+}
+
 // function updatePrice(price) {
 //   let priceContainer = parseFloat(
 //     document.getElementsByClassName("productPrice")

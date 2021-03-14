@@ -1,10 +1,10 @@
-"use strict";
+// "use strict";
 
 getMain();
 
 async function getMain() {
   const products = await getProducts();
-
+  console.log(products);
   // Boucle pour récupére toutes les variables des produits
   for (let i = 0; i < products.length; i++) {
     const product = products[i];
@@ -17,7 +17,6 @@ async function getMain() {
       document.getElementsByClassName("productLink")[
         i
       ].href = `pages/product_page.html?id=${product._id}`;
-      console.log(product);
     }
     displayProducts(product);
   }
