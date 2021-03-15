@@ -13,14 +13,18 @@ class Teddies {
   }
 }
 
-// fetch(`http://localhost:3000/api/teddies`)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (json) {
-//     return json;
-//     // for(let i = 0, i < productsList.length, i++){
-//     //   apiData.productsList.push(new productsList(apiData))
-//     //       console.log(apiData);
-//     // }
-//   });
+fetch(`http://localhost:3000/api/teddies`)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (response) {
+    let teddiesList = [];
+    let apiData = response;
+    for (let i = 0; i < apiData.length; i++) {
+      const teddy = apiData[i];
+      console.log(teddy);
+      teddiesList.push(new Teddies(teddy[i]));
+      console.log(teddiesList);
+      return teddiesList;
+    }
+  });
