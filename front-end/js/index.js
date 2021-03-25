@@ -66,7 +66,7 @@ let displayProductsList = async function () {
     figcaptionImg.appendChild(productName);
 
     let productPrice = document.createElement("p");
-    productPrice.textContent = product.price;
+    productPrice.textContent = product.formatPrice() + " $";
     figcaptionImg.appendChild(productPrice);
   }
 };

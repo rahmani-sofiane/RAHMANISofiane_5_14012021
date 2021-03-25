@@ -30,18 +30,18 @@ let getProductsListAPI = function (productId) {
 
 let displayProduct = async function () {
   const productId = getProductId();
-  let product = await getProductsListAPI(productId);
-  displayProductDatas(product);
-  console.log(product.__proto__);
-  console.log(product);
+  let teddy = await getProductsListAPI(productId);
+  displayProductDatas(teddy);
 };
 
 function displayProductDatas(product) {
   document.getElementById("productPageImage").src = product.imageUrl;
-  document.getElementsByClassName("productName").textContent = product.name;
-  document.getElementsByClassName("productDescription").textContent =
+  document.getElementById("productName").textContent = product.name;
+  document.getElementById("productDescription").textContent =
     product.description;
-  document.getElementsByClassName("productPrice").textContent = product.price;
+  document.getElementById("productPriceTotal").textContent =
+    product.formatPrice() + " $";
+  console.log(typeof product.formatPrice());
 
   for (let i = 0; i < product.colors.length; i++) {
     let colors = product.colors[i];
