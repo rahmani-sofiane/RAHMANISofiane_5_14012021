@@ -1,73 +1,65 @@
 "use strict";
 
-// Récupération du produit associé
+// Function to get the productId associated
 
 function getProductId() {
   return new URL(window.location.href).searchParams.get("id");
 }
 
-// Récupération du produit avec l'id associé depuis le serveur
+// Function to get the datas of one product from API
 
-function getProduct(productId) {
-  return fetch(
-    `http://localhost:3000/api/teddies/${productId}`
-  ).then((response) => response.json());
-}
+let getProductsListAPI = function (productId) {
+  return fetch(`http://localhost:3000/api/teddies/${productId}`)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (response) {
+      let apiDatas = response;
+      return new Teddy(
+        apiDatas.colors,
+        apiDatas._id,
+        apiDatas.name,
+        apiDatas.price,
+        apiDatas.imageUrl,
+        apiDatas.description
+      );
+    });
+};
 
-// Display des articles
+// Function to display the product
 
-getMain();
-
-async function getMain() {
+let displayProduct = async function () {
   const productId = getProductId();
-  const product = await getProduct(productId);
-  function displayProduct(product) {
-    document.getElementsByClassName("productImage")[0].src = product.imageUrl;
-    document.getElementsByClassName("productName")[0].textContent =
-      product.name;
-    document.getElementsByClassName("productDescription")[0].textContent =
-      product.description;
-    document.getElementsByClassName("productPrice")[0].textContent =
-      product.price + ` $`;
-    console.log(product.price);
-  }
-  displayProduct(product);
+  let product = await getProductsListAPI(productId);
+  displayProductDatas(product);
+  console.log(product.__proto__);
+  console.log(product);
+};
 
-  // Fonction permettant d'afficher le choix de couleur
+function displayProductDatas(product) {
+  document.getElementById("productPageImage").src = product.imageUrl;
+  document.getElementsByClassName("productName").textContent = product.name;
+  document.getElementsByClassName("productDescription").textContent =
+    product.description;
+  document.getElementsByClassName("productPrice").textContent = product.price;
 
   for (let i = 0; i < product.colors.length; i++) {
-    let color = product.colors[i];
-    function displayColors(color) {
-      const options = document.createElement("option");
-      let sectionSelectColor = document.getElementById("sectionSelectColor");
-      options.textContent = color;
-      sectionSelectColor.appendChild(options);
-    }
-    displayColors(color);
+    let colors = product.colors[i];
+    displayColors(colors);
   }
 }
 
-// Fonction permettant de mettre à jour le prix en fonction de la quantité
+// Function to display colors
 
-function updatePrice() {
-  let price = document.getElementsByClassName("productPrice");
-  console.log(price);
-  let quantity = document.getElementById("sectionSelectQty");
-  console.log(quantity);
-}
+let displayColors = function (colors) {
+  const options = document.createElement("option");
+  let sectionSelectColor = document.getElementById("sectionSelectColor");
+  options.textContent = colors;
+  sectionSelectColor.appendChild(options);
+};
 
-// function updatePrice(price) {
-//   let priceContainer = parseFloat(
-//     document.getElementsByClassName("productPrice")
-//   );
-//   let quantityContainer = parseFloat(
-//     document.getElementsByClassName("selectQty")
-//   );
-//   console.log(priceContainer, quantityContainer);
-//   let quantity = quantityContainer.value;
-//   let price = priceContainer * quantityContainer;
-// }
-// updatePrice(price);
+// Calling the function to display the product
+displayProduct();
 
 // Fonction permettant d'ajouter une article à la page panier
 

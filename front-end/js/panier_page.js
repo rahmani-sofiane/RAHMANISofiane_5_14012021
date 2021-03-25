@@ -7,6 +7,5 @@
 
 // Faire une classe panier
 // panier = new panier (renvoi objet tableau d'item)
-let panier = getProductsInCart();
-
-function getProductsInCart() {}
+// Class panier en paramètre des Teddy
+// Pas oublier couleur et quantité

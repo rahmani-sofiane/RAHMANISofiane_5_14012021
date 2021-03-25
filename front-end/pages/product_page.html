@@ -38,7 +38,7 @@
         <a href="../index.html">
           <p>Accueil</p>
         </a>
-        <a href="pages/panier_page.html">
+        <a href="./panier_page.html">
           <p>Panier</p>
         </a>
       </navbar>
@@ -47,25 +47,21 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6">
-            <div class="product-wrapper">
-              <div class="img-wrapper">
-                <figure class="bloc-picture">
-                  <img class="productImage" />
-                </figure>
-              </div>
-            </div>
+            <figure class="blocPicture">
+              <img id="productPageImage"/>
+            </figure>
           </div>
           <div class="col-12 col-md-6">
-            <div class="description-wrapper">
+            <div class="descriptionWrapper">
               <p class="productName"></p>
               <p class="productDescription"></p>
-              <label for="sectionSelectColor">Colors</label>
+              <label for="section SelectColor">Couleurs</label>
               <select
                 class="selectColor"
                 id="sectionSelectColor"
                 name="colors"
               ></select>
-              <label for="sectionSelectQty">Quantité</label>
+              <label for="section SelectQty">Quantité</label>
               <input
                 type="number"
                 value="1"
@@ -89,6 +85,7 @@
         <p>Contact</p>
       </ul>
     </footer>
+    <script src="../js/class.js"></script>
     <script src="../js/product_page.js"></script>
   </body>
 </html>

@@ -1,30 +1,35 @@
 "use strict";
 
-// class list
+// class Teddy {
+//   constructor(colors, _id, name, price, imageUrl, description) {
+//     this.colors = colors;
+//     this._id = _id;
+//     this.name = name;
+//     this.price = price;
+//     this.imageUrl = imageUrl;
+//     this.description = description;
+//   }
+// }
 
-class Teddies {
-  constructor(_id, name, price, imageUrl, description, colors) {
+// Modifier classe
+
+class Teddy {
+  constructor(colors, _id, name, price, imageUrl, description) {
+    this.colors = colors;
     this._id = _id;
     this.name = name;
     this.price = price;
     this.imageUrl = imageUrl;
     this.description = description;
-    this.colors = colors;
   }
+  // Method to format price
+  // formatPrice() {
+  //   return this.price / 100;
+  // }
 }
 
-fetch(`http://localhost:3000/api/teddies`)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (response) {
-    let teddiesList = [];
-    let apiData = response;
-    for (let i = 0; i < apiData.length; i++) {
-      const teddy = apiData[i];
-      console.log(teddy);
-      teddiesList.push(new Teddies(teddy[i]));
-      console.log(teddiesList);
-      return teddiesList;
-    }
-  });
+// Function to format the price
+
+// let formatPrice = function (price) {
+//   return price / 100;
+// };
